@@ -4,7 +4,17 @@
 #include <vector>
 #include <queue>
 #include <string>
-#include "header.hpp"
+#include <list>
+
+#include "array.hpp"
+#include "Dlist.hpp"
+#include "hash.hpp"
+#include "Queue.hpp"
+#include "Spisok.hpp"
+#include "Stack.hpp"
+#include "tree.hpp"
+
+using namespace std;
 
 int main(int argc, char* argv[]) {
     if (argc != 5) {
@@ -23,7 +33,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    HashTable db;
+    Hash db;
     Array array;
     Queue queue;
     DoublyLinkedList list; 
@@ -257,7 +267,7 @@ int main(int argc, char* argv[]) {
             cout << "Unknown action" << endl;
         }
 
-        db.saveToFile("hash.txt");
+        db.writeToFile("hash.txt");
         array.saveToFile("mass.txt");
         queue.writeToFile();
         list.saveToFile("DoubleLinkedList.txt");
